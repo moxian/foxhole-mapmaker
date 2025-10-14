@@ -1,0 +1,85 @@
+{
+  "regionId" : 32,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Callum's Keep",
+    "x" : 0.3986264,
+    "y" : 0.23518516,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Camp Hollow",
+    "x" : 0.75129753,
+    "y" : 0.2829856,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Holdout",
+    "x" : 0.70983833,
+    "y" : 0.5703603,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Hollowhill",
+    "x" : 0.6174276,
+    "y" : 0.16184537,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Ire",
+    "x" : 0.4794494,
+    "y" : 0.8495265,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Lookout",
+    "x" : 0.75171673,
+    "y" : 0.7793463,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Naofa",
+    "x" : 0.14666781,
+    "y" : 0.503729,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Princefal Burn",
+    "x" : 0.19808379,
+    "y" : 0.54685104,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Scouts Jest",
+    "x" : 0.23736292,
+    "y" : 0.7437504,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Dreg",
+    "x" : 0.53022766,
+    "y" : 0.24204479,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Gunwall",
+    "x" : 0.4388706,
+    "y" : 0.3766741,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The River Vein",
+    "x" : 0.5539442,
+    "y" : 0.49919212,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Trail of the Dead",
+    "x" : 0.42227492,
+    "y" : 0.623544,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Valta Downs",
+    "x" : 0.64961797,
+    "y" : 0.8310381,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Vex",
+    "x" : 0.3795331,
+    "y" : 0.8731494,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1757341040999,
+  "version" : 2
+}

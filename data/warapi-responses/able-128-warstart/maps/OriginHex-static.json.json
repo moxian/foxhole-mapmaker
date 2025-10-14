@@ -1,0 +1,85 @@
+{
+  "regionId" : 42,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Arise",
+    "x" : 0.44631964,
+    "y" : 0.42305315,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cado",
+    "x" : 0.2512543,
+    "y" : 0.5381689,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Dormio",
+    "x" : 0.8107748,
+    "y" : 0.59095985,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Exorior",
+    "x" : 0.5724993,
+    "y" : 0.8865212,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Finis",
+    "x" : 0.3178356,
+    "y" : 0.5401409,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Initium",
+    "x" : 0.6155851,
+    "y" : 0.3369217,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Noventus Passage",
+    "x" : 0.48205286,
+    "y" : 0.095706396,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Obsidio Island",
+    "x" : 0.21929407,
+    "y" : 0.27333707,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Teichotima",
+    "x" : 0.32080472,
+    "y" : 0.78004307,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Temple Field",
+    "x" : 0.71719706,
+    "y" : 0.52028936,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Dreamer's Road",
+    "x" : 0.57505506,
+    "y" : 0.48412567,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Echo",
+    "x" : 0.73223627,
+    "y" : 0.6672341,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Steel Road",
+    "x" : 0.5859939,
+    "y" : 0.11162431,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Sundering",
+    "x" : 0.46707276,
+    "y" : 0.6354855,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "World Star",
+    "x" : 0.63621795,
+    "y" : 0.7767595,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027988213,
+  "version" : 2
+}

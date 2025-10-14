@@ -1,0 +1,95 @@
+{
+  "regionId" : 46,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Bewailing Fort",
+    "x" : 0.1862475,
+    "y" : 0.4753392,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "East Narthex",
+    "x" : 0.6847072,
+    "y" : 0.72327536,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Penitent Inlet",
+    "x" : 0.32504606,
+    "y" : 0.45935994,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Saint's Crossing",
+    "x" : 0.6889197,
+    "y" : 0.3023229,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Second Prayer",
+    "x" : 0.8228025,
+    "y" : 0.40824884,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sleeping Choir",
+    "x" : 0.7558153,
+    "y" : 0.6874023,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sly Passage",
+    "x" : 0.52440506,
+    "y" : 0.8444923,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Four Pillars",
+    "x" : 0.58946913,
+    "y" : 0.12745516,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Garth",
+    "x" : 0.5345241,
+    "y" : 0.5945451,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Laity",
+    "x" : 0.23438673,
+    "y" : 0.6618996,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Treasury",
+    "x" : 0.41098657,
+    "y" : 0.49743772,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Vault",
+    "x" : 0.37365684,
+    "y" : 0.252611,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Third Chapter",
+    "x" : 0.563485,
+    "y" : 0.2069063,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Transept",
+    "x" : 0.30458647,
+    "y" : 0.7428997,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Watchful Nave",
+    "x" : 0.38035214,
+    "y" : 0.8657404,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Weephome",
+    "x" : 0.73456705,
+    "y" : 0.39799002,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Woodlouse Ledge",
+    "x" : 0.34729883,
+    "y" : 0.14719062,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1757458562613,
+  "version" : 2
+}

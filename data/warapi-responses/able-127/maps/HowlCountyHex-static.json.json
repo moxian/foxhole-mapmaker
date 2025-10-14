@@ -1,0 +1,75 @@
+{
+  "regionId" : 35,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Austriaca Reservoir",
+    "x" : 0.5030339,
+    "y" : 0.5478375,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Checkpoint Titim",
+    "x" : 0.5060007,
+    "y" : 0.41285184,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fort Red",
+    "x" : 0.8647111,
+    "y" : 0.41167375,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fort Rider",
+    "x" : 0.35139802,
+    "y" : 0.85675204,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Great Warden Dam",
+    "x" : 0.6554019,
+    "y" : 0.35621113,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Hungry Wolf",
+    "x" : 0.17645623,
+    "y" : 0.46003953,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Little Lamb",
+    "x" : 0.5877111,
+    "y" : 0.81540585,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Sickleshire",
+    "x" : 0.69961804,
+    "y" : 0.65790194,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Slipgate Outpost",
+    "x" : 0.40390867,
+    "y" : 0.38564897,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Snakewall",
+    "x" : 0.3858706,
+    "y" : 0.13108893,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Teller Farm",
+    "x" : 0.40042853,
+    "y" : 0.6461763,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Hunting Grounds",
+    "x" : 0.21771893,
+    "y" : 0.6758163,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Viperwalk",
+    "x" : 0.76696825,
+    "y" : 0.8055809,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1757340540844,
+  "version" : 2
+}

@@ -1,0 +1,95 @@
+{
+  "regionId" : 39,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Aspisa",
+    "x" : 0.46133813,
+    "y" : 0.92605644,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Bay of the Ward",
+    "x" : 0.5289373,
+    "y" : 0.35276157,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Bloody Palm Fort",
+    "x" : 0.8574127,
+    "y" : 0.52306366,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cerberus Wake",
+    "x" : 0.26287487,
+    "y" : 0.7303848,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Dogbone",
+    "x" : 0.20944826,
+    "y" : 0.42446396,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Martyr's Fang",
+    "x" : 0.48804128,
+    "y" : 0.43367526,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Rising Loom",
+    "x" : 0.489286,
+    "y" : 0.7042201,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sever",
+    "x" : 0.8255831,
+    "y" : 0.40565625,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Legion's Bounty",
+    "x" : 0.29455715,
+    "y" : 0.62074506,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Phalanx",
+    "x" : 0.37561497,
+    "y" : 0.6187968,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Respite",
+    "x" : 0.40430403,
+    "y" : 0.742963,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Therizó",
+    "x" : 0.4532967,
+    "y" : 0.7386244,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Three Siblings",
+    "x" : 0.7733233,
+    "y" : 0.7450966,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Thunder Plains",
+    "x" : 0.2921307,
+    "y" : 0.26187712,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Thunderbolt",
+    "x" : 0.34465387,
+    "y" : 0.0903161,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Warlord's Stead",
+    "x" : 0.25277558,
+    "y" : 0.35900182,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Winding Bolas",
+    "x" : 0.77879095,
+    "y" : 0.2834924,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027991452,
+  "version" : 2
+}

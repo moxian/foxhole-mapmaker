@@ -1,0 +1,367 @@
+{
+  "regionId" : 4,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ {
+    "teamId" : "NONE",
+    "iconType" : 21,
+    "x" : 0.7752597,
+    "y" : 0.7788177,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 62,
+    "x" : 0.7183622,
+    "y" : 0.4097605,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 20,
+    "x" : 0.29068244,
+    "y" : 0.5592148,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 20,
+    "x" : 0.487454,
+    "y" : 0.64387715,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 20,
+    "x" : 0.26892093,
+    "y" : 0.31685755,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 23,
+    "x" : 0.19701321,
+    "y" : 0.47501156,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.71900785,
+    "y" : 0.26922956,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.74457234,
+    "y" : 0.21606264,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.1917184,
+    "y" : 0.29912978,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.5877244,
+    "y" : 0.41235664,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.78275806,
+    "y" : 0.2915982,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.5519976,
+    "y" : 0.68473464,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.7623559,
+    "y" : 0.693213,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.36922118,
+    "y" : 0.72765183,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.5112194,
+    "y" : 0.14535372,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.5403839,
+    "y" : 0.13902047,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.5103801,
+    "y" : 0.60430765,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 84,
+    "x" : 0.7104638,
+    "y" : 0.673237,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 33,
+    "x" : 0.18699402,
+    "y" : 0.32167327,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 18,
+    "x" : 0.58631134,
+    "y" : 0.49744767,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 18,
+    "x" : 0.59047645,
+    "y" : 0.5072582,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 52,
+    "x" : 0.5354749,
+    "y" : 0.46569824,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 53,
+    "x" : 0.5433421,
+    "y" : 0.43610266,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.5288644,
+    "y" : 0.41532257,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.48605213,
+    "y" : 0.60116243,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.7755067,
+    "y" : 0.2568444,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.37174794,
+    "y" : 0.7166492,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.70218134,
+    "y" : 0.6787971,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.5286723,
+    "y" : 0.10401088,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.54637444,
+    "y" : 0.6545017,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 35,
+    "x" : 0.198595,
+    "y" : 0.34188128,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 58,
+    "x" : 0.5342922,
+    "y" : 0.146956,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 58,
+    "x" : 0.19712242,
+    "y" : 0.2771197,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 58,
+    "x" : 0.57734734,
+    "y" : 0.42436516,
+    "flags" : 41,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 58,
+    "x" : 0.74514246,
+    "y" : 0.2551984,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 58,
+    "x" : 0.7307939,
+    "y" : 0.6694792,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 58,
+    "x" : 0.36178783,
+    "y" : 0.7547044,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 58,
+    "x" : 0.5269085,
+    "y" : 0.6050167,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 45,
+    "x" : 0.44807312,
+    "y" : 0.7688043,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 45,
+    "x" : 0.2988137,
+    "y" : 0.55940205,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "WARDENS",
+    "iconType" : 45,
+    "x" : 0.7507168,
+    "y" : 0.43888697,
+    "flags" : 8,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 40,
+    "x" : 0.38500333,
+    "y" : 0.8090057,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 40,
+    "x" : 0.46443444,
+    "y" : 0.62729794,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 38,
+    "x" : 0.80949235,
+    "y" : 0.26425487,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 38,
+    "x" : 0.61201745,
+    "y" : 0.43795303,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 38,
+    "x" : 0.77989984,
+    "y" : 0.68702537,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 38,
+    "x" : 0.1705694,
+    "y" : 0.37125826,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 38,
+    "x" : 0.38832903,
+    "y" : 0.803196,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 38,
+    "x" : 0.5076392,
+    "y" : 0.18628371,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 32,
+    "x" : 0.60546136,
+    "y" : 0.43512326,
+    "flags" : 0,
+    "viewDirection" : 0
+  }, {
+    "teamId" : "NONE",
+    "iconType" : 32,
+    "x" : 0.7810866,
+    "y" : 0.6686761,
+    "flags" : 0,
+    "viewDirection" : 0
+  } ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ ],
+  "lastUpdated" : 1760027988916,
+  "version" : 19
+}

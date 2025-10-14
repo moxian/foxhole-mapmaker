@@ -1,0 +1,65 @@
+{
+  "regionId" : 34,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Basin Sionnach",
+    "x" : 0.37180838,
+    "y" : 0.36804,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Basinhome",
+    "x" : 0.35348263,
+    "y" : 0.7858053,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cunning Cross",
+    "x" : 0.69363093,
+    "y" : 0.22195037,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Cuttail Station",
+    "x" : 0.6165509,
+    "y" : 0.32046065,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Lamplight",
+    "x" : 0.7055696,
+    "y" : 0.5793747,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Radiant Shore",
+    "x" : 0.23862335,
+    "y" : 0.66145176,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sess",
+    "x" : 0.22391447,
+    "y" : 0.41179398,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Stoic",
+    "x" : 0.85562885,
+    "y" : 0.42999405,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Den",
+    "x" : 0.4074,
+    "y" : 0.5118155,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Foxfields",
+    "x" : 0.39967486,
+    "y" : 0.18785414,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Torchwood",
+    "x" : 0.73248684,
+    "y" : 0.7331818,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1757483521932,
+  "version" : 2
+}

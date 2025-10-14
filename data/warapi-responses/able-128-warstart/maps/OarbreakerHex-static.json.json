@@ -1,0 +1,110 @@
+{
+  "regionId" : 16,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Barrenson",
+    "x" : 0.24767084,
+    "y" : 0.2208438,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Bronze",
+    "x" : 0.6681578,
+    "y" : 0.48880494,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Castor",
+    "x" : 0.4789629,
+    "y" : 0.09901617,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Cat Step",
+    "x" : 0.6744287,
+    "y" : 0.7488926,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fort Fogwood",
+    "x" : 0.7877533,
+    "y" : 0.44151908,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Gold",
+    "x" : 0.20602362,
+    "y" : 0.42764127,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Grisly Refuge",
+    "x" : 0.35761848,
+    "y" : 0.16928288,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Integrum",
+    "x" : 0.36254406,
+    "y" : 0.8096713,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Kofteri Channel",
+    "x" : 0.5092713,
+    "y" : 0.39937374,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Lion's Head Pass",
+    "x" : 0.4567767,
+    "y" : 0.8037556,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Obitum",
+    "x" : 0.61952806,
+    "y" : 0.3360275,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Partisan Island",
+    "x" : 0.7380649,
+    "y" : 0.66234607,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Pollux",
+    "x" : 0.43340716,
+    "y" : 0.0915714,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Posterus",
+    "x" : 0.5713095,
+    "y" : 0.7933425,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Reliqua Lagoon",
+    "x" : 0.65778774,
+    "y" : 0.63792604,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sandalwood Beach",
+    "x" : 0.67388934,
+    "y" : 0.14898765,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Silver",
+    "x" : 0.48876172,
+    "y" : 0.5460644,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Skull Beach",
+    "x" : 0.26718813,
+    "y" : 0.44587827,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Conclave",
+    "x" : 0.59638935,
+    "y" : 0.20631014,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Dirk",
+    "x" : 0.32673305,
+    "y" : 0.6661526,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027987510,
+  "version" : 2
+}

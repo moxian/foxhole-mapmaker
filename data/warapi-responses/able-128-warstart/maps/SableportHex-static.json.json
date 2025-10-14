@@ -1,0 +1,100 @@
+{
+  "regionId" : 43,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Aeyrie Bay",
+    "x" : 0.25765997,
+    "y" : 0.5815297,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Barronhome",
+    "x" : 0.60463125,
+    "y" : 0.70886564,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cinderwick",
+    "x" : 0.47070783,
+    "y" : 0.28858405,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Creeping Drought",
+    "x" : 0.552408,
+    "y" : 0.47649437,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Groggy Pinion",
+    "x" : 0.24321643,
+    "y" : 0.19780892,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Light's End",
+    "x" : 0.3591681,
+    "y" : 0.7078175,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Lord's Cellar",
+    "x" : 0.75890756,
+    "y" : 0.821465,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Lye Fields",
+    "x" : 0.45805374,
+    "y" : 0.69130063,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Riven Downs",
+    "x" : 0.72029334,
+    "y" : 0.15452237,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Simmerset",
+    "x" : 0.4681685,
+    "y" : 0.8700067,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Slumbering Meadow",
+    "x" : 0.48295644,
+    "y" : 0.10353899,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Suture Lowlands",
+    "x" : 0.1462633,
+    "y" : 0.4258121,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Talonsfort",
+    "x" : 0.35820884,
+    "y" : 0.13484778,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Pendant",
+    "x" : 0.7150595,
+    "y" : 0.33893856,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Robin's Nest",
+    "x" : 0.7684787,
+    "y" : 0.58302045,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Whetstone",
+    "x" : 0.3226086,
+    "y" : 0.46409044,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Waspwood",
+    "x" : 0.36388937,
+    "y" : 0.33813342,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Wormskive",
+    "x" : 0.81779635,
+    "y" : 0.44278026,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1760027988906,
+  "version" : 2
+}

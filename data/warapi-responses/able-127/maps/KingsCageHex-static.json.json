@@ -1,0 +1,95 @@
+{
+  "regionId" : 44,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Blackguard's Wood",
+    "x" : 0.6868487,
+    "y" : 0.17017397,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Bloodcroft",
+    "x" : 0.49353236,
+    "y" : 0.7844939,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Celes Thicket",
+    "x" : 0.3977919,
+    "y" : 0.9276398,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Concubine",
+    "x" : 0.40652373,
+    "y" : 0.12856048,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Den of Knaves",
+    "x" : 0.7129238,
+    "y" : 0.32082525,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Eastknife",
+    "x" : 0.693761,
+    "y" : 0.521926,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Gibbet Fields",
+    "x" : 0.67552125,
+    "y" : 0.69022655,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Jester's Foil",
+    "x" : 0.24492875,
+    "y" : 0.34223396,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Leafless Whim",
+    "x" : 0.17418413,
+    "y" : 0.65651125,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Ocelot Bridge",
+    "x" : 0.57395965,
+    "y" : 0.43087277,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Scarlethold",
+    "x" : 0.38535228,
+    "y" : 0.7844939,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Slipchain",
+    "x" : 0.2058332,
+    "y" : 0.44086462,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Southblade",
+    "x" : 0.58631134,
+    "y" : 0.8250882,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Bailie",
+    "x" : 0.4612563,
+    "y" : 0.19076172,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Manacle",
+    "x" : 0.38011876,
+    "y" : 0.4641421,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The River Blaise",
+    "x" : 0.5494889,
+    "y" : 0.5984972,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Wolfsbait",
+    "x" : 0.1547705,
+    "y" : 0.53635985,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1757340601848,
+  "version" : 2
+}

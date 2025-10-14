@@ -1,0 +1,80 @@
+{
+  "regionId" : 33,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Calmland",
+    "x" : 0.83024323,
+    "y" : 0.29554182,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Cursed Court",
+    "x" : 0.49168083,
+    "y" : 0.4426604,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fort Blather",
+    "x" : 0.74179506,
+    "y" : 0.8028215,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Hush",
+    "x" : 0.45665428,
+    "y" : 0.22281247,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Inari Base",
+    "x" : 0.74317586,
+    "y" : 0.15739217,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Mount Rell",
+    "x" : 0.1787769,
+    "y" : 0.56465214,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Mute",
+    "x" : 0.30032888,
+    "y" : 0.29290342,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Reaching River",
+    "x" : 0.7099959,
+    "y" : 0.67985946,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Rell Foothills",
+    "x" : 0.31728965,
+    "y" : 0.66578835,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sotto Bank",
+    "x" : 0.5626012,
+    "y" : 0.5431819,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Stem",
+    "x" : 0.39363724,
+    "y" : 0.71316886,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Filament",
+    "x" : 0.30684024,
+    "y" : 0.47614998,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Tine",
+    "x" : 0.62117475,
+    "y" : 0.32557455,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Wound",
+    "x" : 0.88332975,
+    "y" : 0.4517844,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027988010,
+  "version" : 2
+}

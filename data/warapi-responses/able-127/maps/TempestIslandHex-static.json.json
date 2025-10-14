@@ -1,0 +1,115 @@
+{
+  "regionId" : 18,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Anchor",
+    "x" : 0.29604387,
+    "y" : 0.33267847,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Blackwatch",
+    "x" : 0.8498147,
+    "y" : 0.40786892,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cirris Valve",
+    "x" : 0.7130552,
+    "y" : 0.48503992,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Eros Lagoon",
+    "x" : 0.14958856,
+    "y" : 0.4612728,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Isle of Psyche",
+    "x" : 0.15159309,
+    "y" : 0.51369226,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Liar's Haven",
+    "x" : 0.68130624,
+    "y" : 0.6398232,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Liar's League",
+    "x" : 0.7747576,
+    "y" : 0.49161983,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Lost Airchal",
+    "x" : 0.69053644,
+    "y" : 0.828817,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Pale Cnap",
+    "x" : 0.28975487,
+    "y" : 0.103957765,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Plana Fada",
+    "x" : 0.32775733,
+    "y" : 0.8202186,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Reef",
+    "x" : 0.70574933,
+    "y" : 0.3034757,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Sclera",
+    "x" : 0.53417295,
+    "y" : 0.5819011,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Skodio Isle",
+    "x" : 0.44565293,
+    "y" : 0.15507607,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Stratos Valve",
+    "x" : 0.5054258,
+    "y" : 0.49301273,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Surge Field",
+    "x" : 0.61058897,
+    "y" : 0.58133745,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Surge Gate",
+    "x" : 0.39956635,
+    "y" : 0.45218205,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Sweetworm",
+    "x" : 0.28520337,
+    "y" : 0.6765304,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Gale",
+    "x" : 0.55610585,
+    "y" : 0.71643656,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Iris",
+    "x" : 0.6266644,
+    "y" : 0.48053998,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Outwood",
+    "x" : 0.6131708,
+    "y" : 0.39710408,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Rush",
+    "x" : 0.526945,
+    "y" : 0.33975324,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1757483762650,
+  "version" : 2
+}

@@ -1,0 +1,75 @@
+{
+  "regionId" : 36,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Bramble Field",
+    "x" : 0.39181563,
+    "y" : 0.5388692,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fallen Crown",
+    "x" : 0.28871924,
+    "y" : 0.43574405,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fort Ealar",
+    "x" : 0.36983803,
+    "y" : 0.71536714,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fort Esterwild",
+    "x" : 0.715624,
+    "y" : 0.5858826,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fort Windham",
+    "x" : 0.40627274,
+    "y" : 0.14023344,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Lost Orphans",
+    "x" : 0.26198232,
+    "y" : 0.6148583,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sweetholt",
+    "x" : 0.7795566,
+    "y" : 0.34597865,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Tallowild",
+    "x" : 0.30835137,
+    "y" : 0.234913,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Bastard's Channel",
+    "x" : 0.5353866,
+    "y" : 0.52028805,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The King",
+    "x" : 0.5588858,
+    "y" : 0.3841091,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Pike",
+    "x" : 0.58913374,
+    "y" : 0.8464404,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Weathered Advance",
+    "x" : 0.36146507,
+    "y" : 0.8574389,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Throne of Druiminn",
+    "x" : 0.62811697,
+    "y" : 0.16055289,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1760027988008,
+  "version" : 2
+}

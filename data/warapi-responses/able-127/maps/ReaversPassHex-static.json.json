@@ -1,0 +1,105 @@
+{
+  "regionId" : 47,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Billhook Reach",
+    "x" : 0.7386341,
+    "y" : 0.28479356,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Binnacle Pitch",
+    "x" : 0.20794858,
+    "y" : 0.7788281,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Blackjack Junction",
+    "x" : 0.4424266,
+    "y" : 0.51454234,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Blissfin Beach",
+    "x" : 0.82837766,
+    "y" : 0.37167186,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Breakwater",
+    "x" : 0.7303377,
+    "y" : 0.4948302,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cape Balderstone",
+    "x" : 0.22160113,
+    "y" : 0.31315333,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Clay Coffer",
+    "x" : 0.6689306,
+    "y" : 0.80417037,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fort Rictus",
+    "x" : 0.31985363,
+    "y" : 0.19995931,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Jeweller's Bay",
+    "x" : 0.7348795,
+    "y" : 0.42902645,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Keelhaul",
+    "x" : 0.4221427,
+    "y" : 0.7107329,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Mount Haulwind",
+    "x" : 0.58524585,
+    "y" : 0.563418,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Privateer's Bounty",
+    "x" : 0.48428428,
+    "y" : 0.24685703,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Scuttletown",
+    "x" : 0.250697,
+    "y" : 0.49042526,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Sharkfin River",
+    "x" : 0.6809418,
+    "y" : 0.2482856,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Bilge",
+    "x" : 0.51629263,
+    "y" : 0.14708644,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Foreward Fathom",
+    "x" : 0.7567202,
+    "y" : 0.56061375,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Furl",
+    "x" : 0.49399126,
+    "y" : 0.8615662,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Whaler",
+    "x" : 0.12975131,
+    "y" : 0.5750582,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Thimble Base",
+    "x" : 0.33860835,
+    "y" : 0.872634,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1757483521956,
+  "version" : 2
+}

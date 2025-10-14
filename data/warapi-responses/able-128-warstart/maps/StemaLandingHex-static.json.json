@@ -1,0 +1,100 @@
+{
+  "regionId" : 48,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Acies Overlook",
+    "x" : 0.5402593,
+    "y" : 0.19109695,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Alchimio Estate",
+    "x" : 0.38099903,
+    "y" : 0.82105845,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Base Ferveret",
+    "x" : 0.64359087,
+    "y" : 0.64350903,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Base Sagitta",
+    "x" : 0.82470584,
+    "y" : 0.557183,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Burnish Beach",
+    "x" : 0.6574877,
+    "y" : 0.3254976,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Desolation Beach",
+    "x" : 0.5923088,
+    "y" : 0.5392233,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Foreland",
+    "x" : 0.56535083,
+    "y" : 0.26199642,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Isle of Eros",
+    "x" : 0.43933237,
+    "y" : 0.4522753,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Stema Approach",
+    "x" : 0.8047542,
+    "y" : 0.8447248,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Coil",
+    "x" : 0.5251296,
+    "y" : 0.40668237,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Flair",
+    "x" : 0.32935584,
+    "y" : 0.22535613,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The North Wind",
+    "x" : 0.3277939,
+    "y" : 0.09158743,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Spearhead",
+    "x" : 0.5968192,
+    "y" : 0.33618543,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Wane",
+    "x" : 0.65546787,
+    "y" : 0.82682943,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Wending Tether",
+    "x" : 0.32975417,
+    "y" : 0.5703861,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The West Line",
+    "x" : 0.73648494,
+    "y" : 0.23043896,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Ustio",
+    "x" : 0.44756553,
+    "y" : 0.5223967,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Verge Wing",
+    "x" : 0.18868819,
+    "y" : 0.47480085,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027987540,
+  "version" : 2
+}

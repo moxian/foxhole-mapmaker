@@ -1,0 +1,80 @@
+{
+  "regionId" : 31,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Camp Upsilon",
+    "x" : 0.26564604,
+    "y" : 0.27070302,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cannonsmoke",
+    "x" : 0.44220516,
+    "y" : 0.64473647,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Climb",
+    "x" : 0.70969653,
+    "y" : 0.14353998,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fort Matchwood",
+    "x" : 0.5452665,
+    "y" : 0.3911263,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fragment Knolls",
+    "x" : 0.17780334,
+    "y" : 0.36585018,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Gunpowder Lane",
+    "x" : 0.61301905,
+    "y" : 0.24346162,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Judicium",
+    "x" : 0.72171146,
+    "y" : 0.36718932,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Minos",
+    "x" : 0.36771578,
+    "y" : 0.47254315,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Penance",
+    "x" : 0.50271493,
+    "y" : 0.16619161,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Perish",
+    "x" : 0.28602916,
+    "y" : 0.74904984,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Red Crossing",
+    "x" : 0.61810666,
+    "y" : 0.83563036,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Red River",
+    "x" : 0.52190596,
+    "y" : 0.70736283,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Twelve Drops",
+    "x" : 0.7133824,
+    "y" : 0.4577753,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Victoria Hill",
+    "x" : 0.77345693,
+    "y" : 0.56334525,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027988995,
+  "version" : 2
+}

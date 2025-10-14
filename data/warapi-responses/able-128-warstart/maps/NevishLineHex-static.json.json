@@ -1,0 +1,90 @@
+{
+  "regionId" : 29,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Blackburn Canal",
+    "x" : 0.3770939,
+    "y" : 0.8266504,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Blackcoat Way",
+    "x" : 0.3481871,
+    "y" : 0.6928178,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Blinding Stones",
+    "x" : 0.39120665,
+    "y" : 0.20742789,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Graven Falls",
+    "x" : 0.5353815,
+    "y" : 0.93596256,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Grief Mother",
+    "x" : 0.70076466,
+    "y" : 0.64825827,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Mistle Shrine",
+    "x" : 0.8272536,
+    "y" : 0.4370878,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Nevish Trail",
+    "x" : 0.35606655,
+    "y" : 0.07994193,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Plumage",
+    "x" : 0.683647,
+    "y" : 0.78385293,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Princefal",
+    "x" : 0.560197,
+    "y" : 0.53361964,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Princefal Burn",
+    "x" : 0.54545474,
+    "y" : 0.70760274,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Tear Road",
+    "x" : 0.3759352,
+    "y" : 0.47364816,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Aging Ocean",
+    "x" : 0.16097441,
+    "y" : 0.43393996,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Arrow",
+    "x" : 0.7917901,
+    "y" : 0.5627346,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Scrying Belt",
+    "x" : 0.5950697,
+    "y" : 0.23161027,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Tomb Father",
+    "x" : 0.41435826,
+    "y" : 0.8720155,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Unruly",
+    "x" : 0.66272694,
+    "y" : 0.07702675,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027987942,
+  "version" : 2
+}

@@ -1,0 +1,80 @@
+{
+  "regionId" : 40,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Baccae Ridge",
+    "x" : 0.45051804,
+    "y" : 0.7249121,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Bleary",
+    "x" : 0.21060354,
+    "y" : 0.5777004,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Camp Tau",
+    "x" : 0.68705684,
+    "y" : 0.5941432,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Clarity Meadow",
+    "x" : 0.6976708,
+    "y" : 0.777257,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Hallow",
+    "x" : 0.48302066,
+    "y" : 0.4527824,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Ichorus Amphitheatre",
+    "x" : 0.32009768,
+    "y" : 0.3045658,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Lost Greensward",
+    "x" : 0.5571165,
+    "y" : 0.9006367,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Night's Regret",
+    "x" : 0.21532287,
+    "y" : 0.4738651,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Sourtooth",
+    "x" : 0.6443212,
+    "y" : 0.098580986,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "South March",
+    "x" : 0.40086308,
+    "y" : 0.52384686,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sweethearth",
+    "x" : 0.654568,
+    "y" : 0.21487646,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Stumble",
+    "x" : 0.37351593,
+    "y" : 0.13980024,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Vineroad",
+    "x" : 0.8237945,
+    "y" : 0.40639648,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Vinum Rillet",
+    "x" : 0.3182327,
+    "y" : 0.81660587,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1757483762164,
+  "version" : 2
+}

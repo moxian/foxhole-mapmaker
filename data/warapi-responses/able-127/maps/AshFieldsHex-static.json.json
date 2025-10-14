@@ -1,0 +1,90 @@
+{
+  "regionId" : 41,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Ashtown",
+    "x" : 0.5143172,
+    "y" : 0.5525154,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Camp Omega",
+    "x" : 0.7096968,
+    "y" : 0.12712017,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cometa",
+    "x" : 0.27839515,
+    "y" : 0.22447485,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Electi",
+    "x" : 0.46130008,
+    "y" : 0.133538,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Gunslinger's Pass",
+    "x" : 0.40480655,
+    "y" : 0.91855067,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Mount Blackmoth",
+    "x" : 0.59724534,
+    "y" : 0.2234254,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Mount Brimstone",
+    "x" : 0.41860235,
+    "y" : 0.8069577,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Omega Valley",
+    "x" : 0.75688833,
+    "y" : 0.30764285,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sootflow",
+    "x" : 0.71663564,
+    "y" : 0.72119087,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Tar Creek",
+    "x" : 0.25911945,
+    "y" : 0.5969615,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Ashfort",
+    "x" : 0.75574505,
+    "y" : 0.42160434,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Calamity",
+    "x" : 0.26671404,
+    "y" : 0.44761574,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Red River",
+    "x" : 0.51841533,
+    "y" : 0.3471736,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Stillness",
+    "x" : 0.37764594,
+    "y" : 0.41737863,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Twin Flames",
+    "x" : 0.7930806,
+    "y" : 0.5975344,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Wasteful Calm",
+    "x" : 0.45589614,
+    "y" : 0.6622806,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1757340831981,
+  "version" : 2
+}

@@ -1,0 +1,85 @@
+{
+  "regionId" : 12,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Buckler Sound",
+    "x" : 0.51059383,
+    "y" : 0.5146678,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Daihbi Point",
+    "x" : 0.30176052,
+    "y" : 0.11618838,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fading Lights",
+    "x" : 0.73406035,
+    "y" : 0.69156134,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Longing",
+    "x" : 0.36998627,
+    "y" : 0.73207545,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Cord",
+    "x" : 0.5624944,
+    "y" : 0.69426215,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Dais",
+    "x" : 0.59315604,
+    "y" : 0.102234095,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Heir's Knife",
+    "x" : 0.2763725,
+    "y" : 0.780616,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Loneliest Shore",
+    "x" : 0.525158,
+    "y" : 0.25433654,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Long Fast",
+    "x" : 0.41714057,
+    "y" : 0.8898146,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Pram",
+    "x" : 0.39138335,
+    "y" : 0.47735217,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Reach",
+    "x" : 0.701072,
+    "y" : 0.20528859,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Roiling Comets",
+    "x" : 0.85634106,
+    "y" : 0.5443087,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Whorl",
+    "x" : 0.3053683,
+    "y" : 0.34644526,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Trammel Pool",
+    "x" : 0.77552485,
+    "y" : 0.46081984,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "World's End",
+    "x" : 0.2149299,
+    "y" : 0.55217665,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027987995,
+  "version" : 2
+}

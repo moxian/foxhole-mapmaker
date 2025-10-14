@@ -1,0 +1,95 @@
+{
+  "regionId" : 15,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Arcadia",
+    "x" : 0.38920873,
+    "y" : 0.73095393,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Bident Crossroads",
+    "x" : 0.43450263,
+    "y" : 0.6158199,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Black Well",
+    "x" : 0.3884959,
+    "y" : 0.3066156,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Dankana Post",
+    "x" : 0.28913677,
+    "y" : 0.61547464,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Eidolo",
+    "x" : 0.46337456,
+    "y" : 0.52302,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fort Ember",
+    "x" : 0.6044854,
+    "y" : 0.3248994,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Hangman's Court",
+    "x" : 0.7246986,
+    "y" : 0.44283482,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Heart of Rites",
+    "x" : 0.35531422,
+    "y" : 0.46871832,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "House Roloi",
+    "x" : 0.26010418,
+    "y" : 0.77387524,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Lake Nerites",
+    "x" : 0.32699662,
+    "y" : 0.54289067,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Liberty Hill",
+    "x" : 0.36738095,
+    "y" : 0.35783792,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Oceanwatch",
+    "x" : 0.4720286,
+    "y" : 0.12933528,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Peripti Landing",
+    "x" : 0.29418412,
+    "y" : 0.4540274,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Progonos Watch",
+    "x" : 0.50500673,
+    "y" : 0.44088435,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Rite Road",
+    "x" : 0.45041037,
+    "y" : 0.38507676,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Satyr Stone",
+    "x" : 0.6965429,
+    "y" : 0.80090946,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Torch of Demeter",
+    "x" : 0.42485577,
+    "y" : 0.6818831,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1760027987778,
+  "version" : 2
+}

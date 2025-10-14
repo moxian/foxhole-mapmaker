@@ -1,0 +1,95 @@
+{
+  "regionId" : 45,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Breaker Town",
+    "x" : 0.35331258,
+    "y" : 0.44916558,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Briar",
+    "x" : 0.3287869,
+    "y" : 0.22730115,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Broken Zephyr",
+    "x" : 0.4067395,
+    "y" : 0.87126213,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Calving",
+    "x" : 0.83334476,
+    "y" : 0.5485096,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Crystalfleet Inlet",
+    "x" : 0.44950658,
+    "y" : 0.6240362,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Desiccated Front",
+    "x" : 0.48045745,
+    "y" : 0.46486002,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Diarmaid's Plan",
+    "x" : 0.29483473,
+    "y" : 0.05575947,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fort Hoarfrost",
+    "x" : 0.60775054,
+    "y" : 0.58868766,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Glassy Flats",
+    "x" : 0.28270105,
+    "y" : 0.627241,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Port of Rime",
+    "x" : 0.6745212,
+    "y" : 0.3345703,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Revenant's Walk",
+    "x" : 0.5058695,
+    "y" : 0.2373997,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Searing Blind",
+    "x" : 0.17697759,
+    "y" : 0.37411928,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Old Mourn",
+    "x" : 0.28750673,
+    "y" : 0.766004,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Pale House",
+    "x" : 0.18694079,
+    "y" : 0.439909,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The South Wind",
+    "x" : 0.6103042,
+    "y" : 0.83921206,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Thornhold",
+    "x" : 0.23308882,
+    "y" : 0.595859,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Vulpine Watch",
+    "x" : 0.4286188,
+    "y" : 0.72822374,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1757340535305,
+  "version" : 2
+}

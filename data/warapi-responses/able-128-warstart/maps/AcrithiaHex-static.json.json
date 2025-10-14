@@ -1,0 +1,80 @@
+{
+  "regionId" : 30,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Astero's Spear",
+    "x" : 0.6292714,
+    "y" : 0.18665193,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Camp Omicron",
+    "x" : 0.71446663,
+    "y" : 0.12350824,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Duelling Kegs",
+    "x" : 0.32337892,
+    "y" : 0.71220475,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fated Heel",
+    "x" : 0.58800983,
+    "y" : 0.3380633,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Final March",
+    "x" : 0.80758244,
+    "y" : 0.29250857,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Heir Apparent",
+    "x" : 0.45826307,
+    "y" : 0.094163164,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Legion Ranch",
+    "x" : 0.7532782,
+    "y" : 0.4639188,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Nereid Keep",
+    "x" : 0.71448785,
+    "y" : 0.63494116,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Patridia",
+    "x" : 0.3927823,
+    "y" : 0.609666,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Riverlands",
+    "x" : 0.49876517,
+    "y" : 0.83077586,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Swordfort",
+    "x" : 0.2708097,
+    "y" : 0.29338244,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Brinehold",
+    "x" : 0.49710044,
+    "y" : 0.48647487,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Thetus Ring",
+    "x" : 0.42926803,
+    "y" : 0.32354346,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Weary Slumber",
+    "x" : 0.31429753,
+    "y" : 0.14879908,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1760027988389,
+  "version" : 2
+}

@@ -1,0 +1,90 @@
+{
+  "regionId" : 19,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Argosa",
+    "x" : 0.7429409,
+    "y" : 0.44385427,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Barreller's Way",
+    "x" : 0.6633694,
+    "y" : 0.46910247,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Den of Thieves",
+    "x" : 0.2886002,
+    "y" : 0.28499076,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Exile",
+    "x" : 0.42578155,
+    "y" : 0.73800045,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Fleecewatch",
+    "x" : 0.39515048,
+    "y" : 0.1398176,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Isawa",
+    "x" : 0.54864764,
+    "y" : 0.1970142,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Lipsia",
+    "x" : 0.7286327,
+    "y" : 0.75959414,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Peripti Depths",
+    "x" : 0.48257208,
+    "y" : 0.80496967,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Perpetua Channel",
+    "x" : 0.47322682,
+    "y" : 0.37199098,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Pig Island",
+    "x" : 0.49813956,
+    "y" : 0.51225114,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Primus Trames",
+    "x" : 0.5917489,
+    "y" : 0.85785306,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Protos",
+    "x" : 0.29480112,
+    "y" : 0.4396915,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Saegio",
+    "x" : 0.56165975,
+    "y" : 0.4809213,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Axehead",
+    "x" : 0.26360834,
+    "y" : 0.6095882,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Ursa Base",
+    "x" : 0.6612842,
+    "y" : 0.2427636,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Vicit Bay",
+    "x" : 0.39551902,
+    "y" : 0.5515155,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1760027987509,
+  "version" : 2
+}

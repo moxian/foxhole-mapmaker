@@ -1,0 +1,130 @@
+{
+  "regionId" : 20,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Balor's Crown",
+    "x" : 0.6720318,
+    "y" : 0.28519696,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Battered Landing",
+    "x" : 0.3055171,
+    "y" : 0.55011296,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Brackish Point",
+    "x" : 0.30299953,
+    "y" : 0.15477471,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Dannan Coast",
+    "x" : 0.5379241,
+    "y" : 0.100875914,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Dearg's Fang",
+    "x" : 0.59473014,
+    "y" : 0.36644128,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Enduring Wake",
+    "x" : 0.20581831,
+    "y" : 0.6122418,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Iron Junction",
+    "x" : 0.35952666,
+    "y" : 0.7956661,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Kelpie's Mane",
+    "x" : 0.7760368,
+    "y" : 0.63521427,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Kelpie's Tail",
+    "x" : 0.7194254,
+    "y" : 0.6748694,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Liegehearth",
+    "x" : 0.30281493,
+    "y" : 0.4512878,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Merrow's Rest",
+    "x" : 0.7893252,
+    "y" : 0.77107877,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Saltbrook Channel",
+    "x" : 0.303757,
+    "y" : 0.38162574,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Sídhe Fall",
+    "x" : 0.48438844,
+    "y" : 0.29702434,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Dark Road",
+    "x" : 0.83693856,
+    "y" : 0.49502707,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Evil Eye",
+    "x" : 0.70691365,
+    "y" : 0.45178506,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The North Star",
+    "x" : 0.30252346,
+    "y" : 0.26164305,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Old Jack Tar",
+    "x" : 0.1797868,
+    "y" : 0.41211194,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Overland",
+    "x" : 0.57504135,
+    "y" : 0.7966601,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Selkie Bluffs",
+    "x" : 0.57922477,
+    "y" : 0.54058766,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Styx",
+    "x" : 0.464723,
+    "y" : 0.6391649,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Whispering Waves",
+    "x" : 0.66084594,
+    "y" : 0.5801161,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Tuatha Watchpost",
+    "x" : 0.853922,
+    "y" : 0.5507405,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Wellchurch",
+    "x" : 0.5146297,
+    "y" : 0.45945293,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Woodbind",
+    "x" : 0.69931203,
+    "y" : 0.7336695,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027988412,
+  "version" : 2
+}

@@ -1,0 +1,70 @@
+{
+  "regionId" : 37,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Allsight",
+    "x" : 0.5831203,
+    "y" : 0.14839464,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Bastard's Block",
+    "x" : 0.60732245,
+    "y" : 0.3378211,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Callum's Descent",
+    "x" : 0.33839643,
+    "y" : 0.7846021,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Crimson Thread",
+    "x" : 0.39541408,
+    "y" : 0.23941962,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Eversus",
+    "x" : 0.3591508,
+    "y" : 0.121744014,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Lividus",
+    "x" : 0.61497265,
+    "y" : 0.5383431,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Quietus",
+    "x" : 0.29447103,
+    "y" : 0.36270502,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Rising Calm",
+    "x" : 0.47730553,
+    "y" : 0.38211408,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Bastard Sea",
+    "x" : 0.3520537,
+    "y" : 0.6329891,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Ultimus",
+    "x" : 0.74739987,
+    "y" : 0.1559431,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Velian Storm",
+    "x" : 0.6330108,
+    "y" : 0.4218454,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Warmonger Bay",
+    "x" : 0.72384614,
+    "y" : 0.73181903,
+    "mapMarkerType" : "Minor"
+  } ],
+  "lastUpdated" : 1760027987576,
+  "version" : 2
+}

@@ -1,0 +1,85 @@
+{
+  "regionId" : 38,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Captain's Dread",
+    "x" : 0.6985511,
+    "y" : 0.24677834,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Cavitatis",
+    "x" : 0.43523237,
+    "y" : 0.6119927,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Fort Barley",
+    "x" : 0.4517946,
+    "y" : 0.36775875,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Grapeshot Islands",
+    "x" : 0.56575376,
+    "y" : 0.23027809,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Headsman's Villa",
+    "x" : 0.19618103,
+    "y" : 0.44883764,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Mount Talio",
+    "x" : 0.41691506,
+    "y" : 0.4296799,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Plankhouse",
+    "x" : 0.34952953,
+    "y" : 0.6265077,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Rusty Anchor",
+    "x" : 0.2610594,
+    "y" : 0.33529818,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Second Man",
+    "x" : 0.32955098,
+    "y" : 0.85392964,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Tears of Tethys",
+    "x" : 0.59436184,
+    "y" : 0.50297385,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Tethys Base",
+    "x" : 0.58998483,
+    "y" : 0.54314834,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Old Captain",
+    "x" : 0.83037317,
+    "y" : 0.57597953,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Tusk",
+    "x" : 0.30513078,
+    "y" : 0.18498951,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Wary Nymphae",
+    "x" : 0.7113685,
+    "y" : 0.80710125,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Titancall",
+    "x" : 0.572694,
+    "y" : 0.86351216,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1757458562570,
+  "version" : 2
+}

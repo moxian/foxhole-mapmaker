@@ -1,0 +1,11 @@
+{
+  "warId" : "4ea6ade9-b1a2-4649-a2c9-9b3bcd99c6ed",
+  "warNumber" : 127,
+  "winner" : "NONE",
+  "conquestStartTime" : 1756402201864,
+  "conquestEndTime" : null,
+  "resistanceStartTime" : null,
+  "scheduledConquestEndTime" : null,
+  "requiredVictoryTowns" : 32,
+  "shortRequiredVictoryTowns" : 0
+}

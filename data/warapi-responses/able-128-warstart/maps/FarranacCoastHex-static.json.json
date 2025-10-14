@@ -1,0 +1,170 @@
+{
+  "regionId" : 13,
+  "scorchedVictoryTowns" : 0,
+  "mapItems" : [ ],
+  "mapItemsC" : [ ],
+  "mapItemsW" : [ ],
+  "mapTextItems" : [ {
+    "text" : "Apollo's Landing",
+    "x" : 0.4314927,
+    "y" : 0.57976526,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Cackling Strand",
+    "x" : 0.37053815,
+    "y" : 0.19182852,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Carrion Fields",
+    "x" : 0.61662257,
+    "y" : 0.45785448,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Cora Lushlands",
+    "x" : 0.54585594,
+    "y" : 0.8671113,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Cormac Beach",
+    "x" : 0.4727384,
+    "y" : 0.78347987,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Gulf of the Daughters",
+    "x" : 0.016857829,
+    "y" : 0.5832988,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Hermes Inlet",
+    "x" : 0.2707489,
+    "y" : 0.432295,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Huskhollow",
+    "x" : 0.5860919,
+    "y" : 0.56278074,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Iuxta Gulf",
+    "x" : 0.77839315,
+    "y" : 0.14600633,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Kardia",
+    "x" : 0.6261059,
+    "y" : 0.86518013,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Liberation Street",
+    "x" : 0.8314815,
+    "y" : 0.8458243,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Macha's Keening",
+    "x" : 0.70205057,
+    "y" : 0.7824685,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Mara",
+    "x" : 0.8549705,
+    "y" : 0.48427492,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "McCarthy Fields",
+    "x" : 0.6015004,
+    "y" : 0.7810918,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Mooring Dens",
+    "x" : 0.5923805,
+    "y" : 0.2851551,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Pleading Wharf",
+    "x" : 0.6262762,
+    "y" : 0.71746904,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Scarp of Ambrose",
+    "x" : 0.4770394,
+    "y" : 0.37934086,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Scythe",
+    "x" : 0.78855526,
+    "y" : 0.34850213,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Sickle Hill",
+    "x" : 0.4659355,
+    "y" : 0.44424376,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Skeleton Road",
+    "x" : 0.59403133,
+    "y" : 0.35402372,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Sunder Beach",
+    "x" : 0.35613468,
+    "y" : 0.4198639,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Terra",
+    "x" : 0.6119086,
+    "y" : 0.40515536,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Bay of Artemis",
+    "x" : 0.35195225,
+    "y" : 0.6874335,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Bone Haft",
+    "x" : 0.50207216,
+    "y" : 0.22624204,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Heart Road",
+    "x" : 0.66623056,
+    "y" : 0.9169244,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Jade Cove",
+    "x" : 0.4322609,
+    "y" : 0.6490256,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "The Mirror",
+    "x" : 0.8247223,
+    "y" : 0.41111118,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Reaping Fields",
+    "x" : 0.6509468,
+    "y" : 0.51992047,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The River Mercy",
+    "x" : 0.57574064,
+    "y" : 0.6521498,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "The Snag",
+    "x" : 0.89351374,
+    "y" : 0.7870541,
+    "mapMarkerType" : "Minor"
+  }, {
+    "text" : "Transient Valley",
+    "x" : 0.6561139,
+    "y" : 0.1455342,
+    "mapMarkerType" : "Major"
+  }, {
+    "text" : "Victa",
+    "x" : 0.4417568,
+    "y" : 0.8744741,
+    "mapMarkerType" : "Major"
+  } ],
+  "lastUpdated" : 1760027988525,
+  "version" : 2
+}
