@@ -4,8 +4,6 @@ use anyhow::Context;
 
 mod warapi_schema;
 
-const WARAPI_REPO_PATH: &'static str = r"H:\trash\trash\warapi";
-
 enum Shard {
     Able,
 }
@@ -281,16 +279,13 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
     let mut defs_icons_base = svg::node::element::Group::new().set("id", "icons-base-group");
     let mut def_composed_hexes = svg::node::element::Group::new();
 
-    let cos_30 = (std::f32::consts::PI / 180.0 * 30.0).cos();
-    let sin_30 = (std::f32::consts::PI / 180.0 * 30.0).sin();
-
     let mut known_icon_dims = std::collections::HashMap::new();
     let (mut terrain_width, mut terrain_height) = (0, 0); // uhh...
     // the scaling of just the terrain. Making them smaller in pixels also makes them smaller in filesize
     // which is valuable.
     let terrain_resize_factor = 1.0 / 3.0;
     let icon_scale_factor = 1.0 / 6.0; // scaling of icons. No effect on file size or quality, pure svg
-    let global_scale_factor = 1.0; // the scaling of the overall image. No effect on file size, just presentation
+    let global_scale_factor = 2.0; // the scaling of the overall image. No effect on file size, just presentation
     let mut composed_dims = (0, 0); // dimensions of the individual hexes, with everything on them
     let mut eventual_bounds_px = (0, 0); // dimensions of the entire image
 
@@ -504,6 +499,8 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
 
         // now position the hex on the global grid
         {
+            let cos_30 = (std::f32::consts::PI / 180.0 * 30.0).cos();
+            let sin_30 = (std::f32::consts::PI / 180.0 * 30.0).sin();
             let hex_diameter_short = composed_dims.1;
             let hex_coords = get_hex_coords(&map_name);
 
