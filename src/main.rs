@@ -1,34 +1,56 @@
-use std::io::Write;
+use std::{collections::BTreeMap, io::Write};
 
 use anyhow::Context;
 
 mod warapi_schema;
 
+const RESPONSE_CACHE_DIR: &'static str = "cache/warapi-response";
+
+#[derive(Clone, Copy)]
 enum Shard {
     Able,
+    Baker,
+    Devbranch,
 }
 impl Shard {
     fn root_endpoint(&self) -> &'static str {
         match self {
             Shard::Able => "https://war-service-live.foxholeservices.com/api",
+            Shard::Baker => "https://war-service-live-2.foxholeservices.com/api",
+            Shard::Devbranch => "https://war-service-dev.foxholeservices.com/api",
         }
     }
     fn name(&self) -> &'static str {
         match self {
             Shard::Able => "able",
+            Shard::Baker => "baker",
+            Shard::Devbranch => "devbranch",
         }
+    }
+}
+impl std::str::FromStr for Shard {
+    type Err = anyhow::Error;
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        Ok(match s.to_lowercase().as_str() {
+            "able" => Self::Able,
+            "baker" => Self::Baker,
+            "devbranch" => Self::Devbranch,
+            _ => anyhow::bail!("Unrecognized shard {:?}", s),
+        })
     }
 }
 
 struct WarapiClient {
     agent: ureq::Agent,
     shard: Shard,
+    // reuse_cache: bool,
     // this being unused is GOOD.
     // war: warapi_schema::War,
     war_name: String,
 }
 impl WarapiClient {
     pub fn new(agent: ureq::Agent, shard: Shard) -> Self {
+        // println!("root endpoint: {}", shard.root_endpoint());
         let response_raw = agent
             .get(format!("{}/worldconquest/war", shard.root_endpoint()))
             .call()
@@ -51,7 +73,9 @@ impl WarapiClient {
                 war_name = format!("{}-{}-resistance", shard.name(), war.war_number);
             }
         };
-        let out_f = &std::path::PathBuf::from(format!("cache/warapi/{}/war.json", war_name));
+
+        let out_f =
+            &std::path::PathBuf::from(format!("{}/{}/war.json", RESPONSE_CACHE_DIR, war_name));
 
         if out_f.exists() {
             let old_war: warapi_schema::War =
@@ -72,6 +96,7 @@ impl WarapiClient {
         let out = WarapiClient {
             agent,
             shard,
+            // reuse_cache,
             // war,
             war_name,
         };
@@ -90,8 +115,10 @@ impl WarapiClient {
             self.shard.root_endpoint(),
             endpoint.trim_start_matches("/")
         );
-        let cache_f =
-            std::path::PathBuf::from(format!("cache/warapi/{}/{}.json", self.war_name, file,));
+        let cache_f = std::path::PathBuf::from(format!(
+            "{}/{}/{}.json",
+            RESPONSE_CACHE_DIR, self.war_name, file,
+        ));
         let data = match cache_f.exists() {
             true => std::fs::read_to_string(cache_f).unwrap(),
             false => {
@@ -150,108 +177,83 @@ fn get_icon_file_name(icon_id: i32) -> &'static str {
     match icon_id {
         8 => "Forward Base 1", // Forward Base 1,
 
-        11 => "Medical",                // Hospital,
-        12 => "Vehicle",                // Vehicle Factory,
-        17 => "Manufacturing",          // Refinery,
-        18 => "Shipyard",               // Shipyard,
-        19 => "TechCenter",             // Tech Center,
-        20 => "Salvage",                // Salvage Field,
-        21 => "Components",             // Component Field,
-        22 => "FuelField",              // Fuel Field,
-        23 => "Sulfur",                 // Sulfur Field,
-        24 => "WorldMapTent",           // World Map Tent,
-        25 => "TravelTent",             // Travel Tent,
-        26 => "TrainingArea",           // Training Area,
-        27 => "Keep",                   // Special Base (Keep),
-        28 => "ObservationTower",       // Observation Tower,
-        29 => "Fort",                   // Fort,
-        30 => "Troop Ship",             // Troop Ship,
-        32 => "SulfurMine",             // Sulfur Mine,
-        33 => "StorageFacility",        // Storage Facility,
-        34 => "Factory",                // Factory,
-        35 => "Safehouse",              // Garrison Station,
-        37 => "RocketSite",             // Rocket Site,
-        38 => "SalvageMine",            // Salvage Mine,
-        39 => "ConstructionYard",       // Construction Yard,
-        40 => "ComponentMine",          // Component Mine,
-        45 => "RelicBase",              // Relic Base 1,
-        51 => "MassProductionFactory",  // Mass Production Factory,
-        52 => "Seaport",                // Seaport,
-        53 => "CoastalGun",             // Coastal Gun,
-        54 => "SoulFactory",            // Soul Factory,
-        56 => "TownBaseTier1",          // Town Base 1,
-        57 => "TownBaseTier2",          // Town Base 2,
-        58 => "TownBaseTier3",          // Town Base 3,
-        59 => "StormCannon",            // Storm Cannon,
-        60 => "IntelCenter",            // Intel Center,
-        61 => "Coal",                   // Coal Field,
-        62 => "OilWell",                // Oil Field,
-        70 => "RocketTarget",           // Rocket Target,
-        71 => "RocketGround Zero",      // Rocket Ground Zero,
-        72 => "RocketSite With Rocket", // Rocket Site With Rocket,
-        75 => "FacilityMineOilRig",     // Facility Mine Oil Rig,
-        83 => "WeatherStation",         // Weather Station,
-        84 => "MortarHouse",            // Mortar House,
+        11 => "Medical",               // Hospital,
+        12 => "Vehicle",               // Vehicle Factory,
+        17 => "Manufacturing",         // Refinery,
+        18 => "Shipyard",              // Shipyard,
+        19 => "TechCenter",            // Tech Center,
+        20 => "Salvage",               // Salvage Field,
+        21 => "Components",            // Component Field,
+        22 => "FuelField",             // Fuel Field,
+        23 => "Sulfur",                // Sulfur Field,
+        24 => "WorldMapTent",          // World Map Tent,
+        25 => "TravelTent",            // Travel Tent,
+        26 => "TrainingArea",          // Training Area,
+        27 => "Keep",                  // Special Base (Keep),
+        28 => "ObservationTower",      // Observation Tower,
+        29 => "Fort",                  // Fort,
+        30 => "Troop Ship",            // Troop Ship,
+        32 => "SulfurMine",            // Sulfur Mine,
+        33 => "StorageFacility",       // Storage Facility,
+        34 => "Factory",               // Factory,
+        35 => "Safehouse",             // Garrison Station,
+        37 => "RocketSite",            // Rocket Site,
+        38 => "SalvageMine",           // Salvage Mine,
+        39 => "ConstructionYard",      // Construction Yard,
+        40 => "ComponentMine",         // Component Mine,
+        45 => "RelicBase",             // Relic Base 1,
+        51 => "MassProductionFactory", // Mass Production Factory,
+        52 => "Seaport",               // Seaport,
+        53 => "CoastalGun",            // Coastal Gun,
+        54 => "SoulFactory",           // Soul Factory,
+        56 => "TownBaseTier1",         // Town Base 1,
+        57 => "TownBaseTier2",         // Town Base 2,
+        58 => "TownBaseTier3",         // Town Base 3,
+        59 => "StormCannon",           // Storm Cannon,
+        60 => "IntelCenter",           // Intel Center,
+        61 => "Coal",                  // Coal Field,
+        62 => "OilWell",               // Oil Field,
+        70 => "RocketTarget",          // Rocket Target,
+        71 => "RocketGroundZero",      // Rocket Ground Zero,
+        72 => "RocketSiteWithRocket",  // Rocket Site With Rocket,
+        75 => "FacilityMineOilRig",    // Facility Mine Oil Rig,
+        83 => "WeatherStation",        // Weather Station,
+        84 => "MortarHouse",           // Mortar House,
+
+        88 => "AircraftDepot",
+        89 => "AircraftFactory",
+        90 => "AircraftRadar",
+        91 => "AircraftRunwayT1",
+        92 => "AircraftRunwayT2",
         other => unimplemented!("unknown icon type {:?}", other),
     }
 }
 
-fn get_hex_coords(name: &str) -> (u32, u32) {
-    // source: eyes
-    // One could also grab these from the game files at War/Content/Blueprints/Data/BMapList.uasset
-    // tho the coords there would be different, and placement calc needs adjusted
-    match name {
-        "BasinSionnachHex" => (0, 0),
-        "HowlCountyHex" => (0, 1),
-        "ClansheadValleyHex" => (0, 2),
-        "MorgensCrossingHex" => (0, 3),
-        "GodcroftsHex" => (0, 4),
+struct HexCoordInfo {
+    hexes: BTreeMap<String, (i32, i32)>,
+}
+impl HexCoordInfo {
+    fn new() -> Self {
+        let mut hexes = BTreeMap::new();
 
-        "SpeakingWoodsHex" => (1, 0),
-        "ReachingTrailHex" => (1, 1),
-        "ViperPitHex" => (1, 2),
-        "WeatheredExpanseHex" => (1, 3),
-        "StlicanShelfHex" => (1, 4),
-        "TempestIslandHex" => (1, 5),
+        let bp_file = "data/datamine/War/Content/Blueprints/Data/BPMapList.json";
+        let bp_data: Vec<serde_json::Value> =
+            serde_json::from_str(&std::fs::read_to_string(bp_file).unwrap()).unwrap();
+        let maplist_c = bp_data
+            .into_iter()
+            .find(|v| v["Type"] == "BPMapList_C")
+            .unwrap();
+        for v in maplist_c["Properties"]["MapDatabase"].as_array().unwrap() {
+            let name = v["Key"].as_str().unwrap().to_owned();
+            let x = v["Value"]["GridCoord"]["X"].as_i64().unwrap() as i32;
+            let y = v["Value"]["GridCoord"]["Y"].as_i64().unwrap() as i32;
+            hexes.insert(name, (x, y));
+        }
+        Self { hexes }
+    }
 
-        "CallumsCapeHex" => (2, 0),
-        "MooringCountyHex" => (2, 1),
-        "CallahansPassageHex" => (2, 2),
-        "MarbanHollow" => (2, 3),
-        "ClahstraHex" => (2, 4),
-        "EndlessShoreHex" => (2, 5),
-        "TheFingersHex" => (2, 6),
-
-        "NevishLineHex" => (3, 0),
-        "StonecradleHex" => (3, 1),
-        "LinnMercyHex" => (3, 2),
-        "DeadLandsHex" => (3, 3),
-        "DrownedValeHex" => (3, 4),
-        "AllodsBightHex" => (3, 5),
-        "ReaversPassHex" => (3, 6),
-
-        "OarbreakerHex" => (4, 0),
-        "FarranacCoastHex" => (4, 1),
-        "KingsCageHex" => (4, 2),
-        "LochMorHex" => (4, 3),
-        "UmbralWildwoodHex" => (4, 4),
-        "ShackledChasmHex" => (4, 5),
-        "TerminusHex" => (4, 6),
-
-        "FishermansRowHex" => (5, 1),
-        "WestgateHex" => (5, 2),
-        "SableportHex" => (5, 3),
-        "HeartlandsHex" => (5, 4),
-        "GreatMarchHex" => (5, 5),
-        "AcrithiaHex" => (5, 6),
-
-        "StemaLandingHex" => (6, 2),
-        "OriginHex" => (6, 3),
-        "AshFieldsHex" => (6, 4),
-        "RedRiverHex" => (6, 5),
-        "KalokaiHex" => (6, 6),
-
-        other => unimplemented!("unknown coordinates of hex {:?}", other),
+    fn get_hex_coords(&self, name: &str) -> (i32, i32) {
+        return self.hexes[name];
     }
 }
 
@@ -273,6 +275,7 @@ fn make_map_icon_base_id(map_item: &warapi_schema::MapItem) -> String {
 
 fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_schema::Map)>) {
     let mut canvas = svg::Document::new();
+    let mut worldbox = svg::node::element::Group::new().set("id", "worldbox");
     let mut defs = svg::node::element::Definitions::new();
     let mut defs_terrain = svg::node::element::Group::new().set("id", "terrain-group");
     let mut defs_icons = svg::node::element::Group::new().set("id", "icons-group");
@@ -286,8 +289,10 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
     let terrain_resize_factor = 1.0 / 3.0;
     let icon_scale_factor = 1.0 / 6.0; // scaling of icons. No effect on file size or quality, pure svg
     let global_scale_factor = 2.0; // the scaling of the overall image. No effect on file size, just presentation
-    let mut composed_dims = (0, 0); // dimensions of the individual hexes, with everything on them
-    let mut eventual_bounds_px = (0, 0); // dimensions of the entire image
+    let mut composed_dims; // dimensions of the individual hexes, with everything on them
+    let mut eventual_bounds_px = (0, 0, 0, 0); // dimensions of the entire image
+
+    let hex_coord_info = HexCoordInfo::new();
 
     {
         // svg filters for coloring base (black-and-white) icons, either to
@@ -322,11 +327,15 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
         }
     }
 
+    let mut hex_canvas_coords = vec![];
     // iterate the maps one by one.
     // Load (and add) the terrain, then load any (missing) icons and add them too.
     for (map_name, map) in maps {
         // debug
         if !["BasinSionnachHex", "HowlCountyHex", "SpeakingWoodsHex"].contains(&map_name.as_str()) {
+            // continue;
+        }
+        if !["DeadLandsHex", "CallahansPassageHex", "MarbanHollow"].contains(&map_name.as_str()) {
             // continue;
         }
         log::info!("hex {}", map_name);
@@ -338,9 +347,14 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
         // load the terrain
         {
             // fixup clahstra naming discrepancy
-            let filename = match map_name.as_str() {
-                "ClahstraHex" => format!("Map{}Map.TGA", map_name),
-                other => format!("Map{}.TGA", other),
+            // let map_name =
+            let filename = match map_name
+                .as_str()
+                .strip_suffix("Hex")
+                .unwrap_or(map_name.as_str())
+            {
+                // "ClahstraHex" => format!("Map{}Map.TGA", map_name),
+                other => format!("Map{}Hex.TGA", other),
             };
 
             let map_base_image = &warapi_repo_path.join("Images").join("maps").join(filename);
@@ -376,6 +390,7 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
                     format!("data:image/png;base64,{}", base64::encode(tn_png.get_ref())),
                 );
             defs_terrain = defs_terrain.add(tn);
+
             let u = svg::node::element::Use::new().set("href", format!("#{}", tn_id));
             composed = composed.add(u);
         }
@@ -484,59 +499,123 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
                 .set("x", tlx)
                 .set("y", tly);
             composed = composed.add(u);
-
-            composed = composed.set("transform", format!("scale({})", global_scale_factor));
-            composed_dims = (
-                // the +2/+1 are for pretty white "borders" between hexes
-                // (explicitly drawing borders on top did not work out well at all -
-                //  drawing pixels looks bad, and drawing svg segments/polygons is VERY heavy
-                //  for the browser, somehow)
-                (terrain_width as f32 * global_scale_factor) as i32 + 2,
-                (terrain_height as f32 * global_scale_factor) as i32 + 1,
-            );
         }
+        composed = composed.set("transform", format!("scale({})", global_scale_factor));
+        composed_dims = (
+            // the +2/+1 are for pretty white "borders" between hexes
+            // (explicitly drawing borders on top did not work out well at all -
+            //  drawing pixels looks bad, and drawing svg segments/polygons is VERY heavy
+            //  for the browser, somehow)
+            (terrain_width as f32 * global_scale_factor) as i32 - 1,
+            (terrain_height as f32 * global_scale_factor) as i32 - 1,
+        );
+
+        // composed = composed.add(svg::node::element::Use::new().set("href", "#hex-border"));
+
         def_composed_hexes = def_composed_hexes.add(composed);
 
         // now position the hex on the global grid
         {
             let cos_30 = (std::f32::consts::PI / 180.0 * 30.0).cos();
             let sin_30 = (std::f32::consts::PI / 180.0 * 30.0).sin();
+
             let hex_diameter_short = composed_dims.1;
-            let hex_coords = get_hex_coords(&map_name);
+            let hex_coords = hex_coord_info.get_hex_coords(&map_name);
 
             let global_offset_px = ((cos_30 * 4.0) * hex_diameter_short as f32, 0.0);
             let offset_hexes = (
-                hex_coords.0 as f32 * -1.0 * cos_30 + hex_coords.1 as f32 * cos_30,
-                hex_coords.0 as f32 * sin_30 + hex_coords.1 as f32 * sin_30,
+                hex_coords.0 as f32 * cos_30,
+                hex_coords.0 as f32 * sin_30 + hex_coords.1 as f32,
             );
 
             let offset = (
-                global_offset_px.0 + offset_hexes.0 * hex_diameter_short as f32, // heigh
-                global_offset_px.1 + offset_hexes.1 * hex_diameter_short as f32,
+                (global_offset_px.0 + offset_hexes.0 * hex_diameter_short as f32).round(), // heigh
+                (global_offset_px.1 + offset_hexes.1 * hex_diameter_short as f32).round(),
             );
 
+            hex_canvas_coords.push(offset);
             let u = svg::node::element::Use::new()
                 .set("href", format!("#{}", composed_hex_id))
                 .set("x", offset.0 as i32)
                 .set("y", offset.1 as i32);
-            canvas = canvas.add(u);
+            worldbox = worldbox.add(u);
             eventual_bounds_px = (
-                eventual_bounds_px.0.max(offset.0 as i32 + composed_dims.0),
-                eventual_bounds_px.1.max(offset.1 as i32 + composed_dims.1),
+                eventual_bounds_px.0.min(offset.0 as i32),
+                eventual_bounds_px.1.min(offset.1 as i32),
+                eventual_bounds_px.2.max(offset.0 as i32 + composed_dims.0),
+                eventual_bounds_px.3.max(offset.1 as i32 + composed_dims.1),
             );
         }
+        // break;
+    }
+
+    // black borders around hexes
+    {
+        let cos_30 = (std::f32::consts::PI / 180.0 * 30.0).cos();
+        let sin_30 = (std::f32::consts::PI / 180.0 * 30.0).sin();
+
+        let radius_long = terrain_width as f32 / 2.0 * global_scale_factor;
+        // let radius_short = (composed_dims.1 / 2) as f32/ global_scale_factor;
+        let points = vec![
+            (-radius_long, 0.0),
+            (-radius_long * sin_30, radius_long * cos_30),
+            (radius_long * sin_30, radius_long * cos_30),
+            (radius_long, 0.0),
+            (radius_long * sin_30, -radius_long * cos_30),
+            (-radius_long * sin_30, -radius_long * cos_30),
+        ];
+        let points_str = points
+            .into_iter()
+            .map(|(x, y)| {
+                format!(
+                    "{},{}",
+                    ((x + radius_long) * 100.0).round() / 100.0,
+                    ((y + radius_long * cos_30) * 100.0).round() / 100.0
+                )
+            })
+            .collect::<Vec<_>>()
+            .join(" ");
+        let p = svg::node::element::Polygon::new()
+            .set("points", points_str)
+            .set("fill", "none")
+            .set("stroke", "black")
+            .set("stroke-width", 1)
+            .set("id", "hex-border");
+        // composed = composed.add(p);
+        defs = defs.add(p)
+    }
+
+    // added after all the terrains so that it gets drawn on top of it
+    for (x, y) in hex_canvas_coords {
+        worldbox = worldbox.add(
+            svg::node::element::Use::new()
+                .set("href", "#hex-border")
+                .set("x", x)
+                .set("y", y), // .set("transform",
+        )
     }
 
     // combine the svg parts together, and write the file out
+    defs = defs.add(worldbox);
     defs = defs.add(defs_icons);
     defs = defs.add(def_composed_hexes);
     defs = defs.add(defs_icons_base);
     defs = defs.add(defs_terrain);
 
-    canvas = canvas.add(defs);
+    let (xmin, ymin, xmax, ymax) = eventual_bounds_px;
     canvas = canvas
-        .set("width", eventual_bounds_px.0)
-        .set("height", eventual_bounds_px.1);
+        .add(
+            svg::node::element::Use::new()
+                .set("href", "#worldbox")
+                .set("x", -xmin)
+                .set("y", -ymin),
+        )
+        .set("width", xmax - xmin)
+        .set("height", ymax - ymin);
+
+    canvas = canvas.add(defs);
+
+    // let mut worldbox = svg::node::element::SVG
 
     let out_f = &std::path::PathBuf::from("tmp/out.svg");
     std::fs::create_dir_all(out_f.parent().unwrap()).unwrap();
@@ -544,9 +623,10 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
     log::info!("Written to {}", out_f.display());
 }
 
-fn do_stuff(cfg: &Config) {
+fn do_stuff(cfg: &Config, opts: &Options) {
     let agent = ureq::Agent::new_with_defaults();
-    let shard = Shard::Able;
+    let shard = opts.shard;
+    // let shard = Shard::Devbranch;
     let client = WarapiClient::new(agent, shard);
 
     let maps = client
@@ -554,6 +634,7 @@ fn do_stuff(cfg: &Config) {
         .iter()
         .map(|mapname| (mapname.clone(), client.get_combined_map(mapname)))
         .collect::<Vec<_>>();
+
     // let warapi_repo_path = std::path::Path::new(WARAPI_REPO_PATH);
     draw_all_hexes(&cfg.warapi_repo_path, maps);
 }
@@ -561,6 +642,7 @@ fn do_stuff(cfg: &Config) {
 #[derive(serde::Deserialize)]
 struct Config {
     warapi_repo_path: std::path::PathBuf,
+    yino_repo_path: Option<std::path::PathBuf>,
 }
 fn read_config() -> Config {
     use std::path::Path;
@@ -590,8 +672,95 @@ fn read_config() -> Config {
     cfg
 }
 
+fn fetch_git_repo(repo_url: &str, repo_path: &std::path::Path) {
+    if !repo_path.exists() {
+        std::fs::create_dir_all(repo_path.parent().unwrap()).unwrap();
+
+        log::info!(
+            "cloning git repository {} -> {}",
+            repo_url,
+            repo_path.display()
+        );
+        git2::build::RepoBuilder::new()
+            .fetch_options({
+                let mut fo = git2::FetchOptions::new();
+                fo.depth(1);
+                fo
+            })
+            .clone(repo_url, repo_path)
+            .with_context(|| {
+                anyhow::format_err!("failed to create repository at {}", repo_path.display())
+            })
+            .unwrap();
+    }
+    let repo = git2::Repository::open(repo_path)
+        .with_context(|| {
+            anyhow::format_err!("failed to open repository at {}", repo_path.display())
+        })
+        .unwrap();
+    let mut remote = repo.find_remote("origin").unwrap();
+    remote.connect(git2::Direction::Fetch).unwrap();
+    let default_branch = &remote
+        .default_branch()
+        .unwrap()
+        .as_str()
+        .unwrap()
+        .rsplit_once("/")
+        .unwrap()
+        .1
+        .to_owned();
+
+    log::info!(".. maybe fetching new changes..");
+    remote
+        .fetch(
+            &[default_branch],
+            Some(&mut git2::FetchOptions::new().depth(1)),
+            None,
+        )
+        .with_context(|| anyhow::format_err!("failed to fetch"))
+        .unwrap();
+    let origin_master_rev = repo
+        .revparse(&format!("origin/{}", default_branch))
+        .unwrap();
+    repo.checkout_tree(
+        origin_master_rev.from().unwrap(),
+        Some(git2::build::CheckoutBuilder::new().force()),
+    )
+    .unwrap();
+}
+
+#[derive(bpaf::Bpaf)]
+#[bpaf(options)]
+struct Options {
+    #[bpaf(long)]
+    shard: Shard,
+    #[bpaf(long)]
+    skip_git: bool,
+}
+
 fn main() {
     env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
-    let cfg = &read_config();
-    do_stuff(cfg)
+    let mut cfg = read_config();
+    let opts = options().run();
+
+    cfg.warapi_repo_path = "cache/warapi-repo".into();
+    log::info!("initializing warapi repo (for the icons)");
+
+    if !opts.skip_git {
+        fetch_git_repo(
+            "https://github.com/clapfoot/warapi.git",
+            &cfg.warapi_repo_path,
+        );
+    }
+    log::info!("initializing yinoguns repo (for the historic map data)");
+    cfg.yino_repo_path = Some("cache/yino-foxhole-web-utils-repo".into());
+
+    if !opts.skip_git {
+        fetch_git_repo(
+            "https://github.com/clapfoot/warapi.git",
+            cfg.yino_repo_path.as_ref().unwrap(),
+        );
+    }
+
+    do_stuff(&cfg, &opts)
 }

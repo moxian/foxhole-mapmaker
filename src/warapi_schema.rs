@@ -1,17 +1,17 @@
 use serde::Deserialize;
 
 #[derive(Deserialize)]
-#[serde(rename_all="camelCase")]
-pub struct War{
+#[serde(rename_all = "camelCase")]
+pub struct War {
     pub war_id: String,
     pub war_number: i32,
     pub resistance_start_time: Option<i64>,
 }
 
 #[derive(Deserialize)]
-#[serde(rename_all="camelCase")]
+#[serde(rename_all = "camelCase")]
 #[allow(unused)]
-pub struct Map{
+pub struct Map {
     pub region_id: i32,
     // pub scorched_victory_towns: i32,
     pub map_items: Vec<MapItem>,
@@ -22,8 +22,8 @@ pub struct Map{
 }
 
 #[derive(Deserialize, Clone)]
-#[serde(rename_all="camelCase")]
-pub struct MapItem{
+#[serde(rename_all = "camelCase")]
+pub struct MapItem {
     pub team_id: TeamId,
     pub icon_type: i32,
     pub x: f32,
@@ -33,19 +33,19 @@ pub struct MapItem{
 }
 
 #[derive(Deserialize, PartialEq, Eq, Clone, Copy)]
-pub enum TeamId{
-    #[serde(rename="NONE")]
+pub enum TeamId {
+    #[serde(rename = "NONE")]
     Nobody,
-    #[serde(rename="WARDENS")]
+    #[serde(rename = "WARDENS")]
     Wardens,
-    #[serde(rename="COLONIALS")]
+    #[serde(rename = "COLONIALS")]
     Colonials,
 }
 
 #[derive(Deserialize)]
-#[serde(rename_all="camelCase")]
+#[serde(rename_all = "camelCase")]
 #[allow(unused)]
-pub struct MapTextItem{
+pub struct MapTextItem {
     pub text: String,
     pub x: f32,
     pub y: f32,
