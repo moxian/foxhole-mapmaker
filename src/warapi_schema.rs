@@ -21,7 +21,7 @@ pub struct Map {
     pub map_text_items: Vec<MapTextItem>,
 }
 
-#[derive(Deserialize, Clone)]
+#[derive(Deserialize, Clone, Debug)]
 #[serde(rename_all = "camelCase")]
 pub struct MapItem {
     pub team_id: TeamId,
@@ -32,7 +32,7 @@ pub struct MapItem {
     // view_direction: i32,
 }
 
-#[derive(Deserialize, PartialEq, Eq, Clone, Copy)]
+#[derive(Deserialize, PartialEq, Eq, Clone, Copy, Debug)]
 pub enum TeamId {
     #[serde(rename = "NONE")]
     Nobody,

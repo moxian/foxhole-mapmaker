@@ -1,4 +1,6 @@
-use std::{collections::BTreeMap, io::Write};
+use std::collections::{BTreeMap, HashMap};
+use std::io::Write;
+use std::sync::LazyLock;
 
 use anyhow::Context;
 
@@ -10,6 +12,7 @@ const RESPONSE_CACHE_DIR: &'static str = "cache/warapi-response";
 enum Shard {
     Able,
     Baker,
+    Charlie,
     Devbranch,
 }
 impl Shard {
@@ -17,6 +20,7 @@ impl Shard {
         match self {
             Shard::Able => "https://war-service-live.foxholeservices.com/api",
             Shard::Baker => "https://war-service-live-2.foxholeservices.com/api",
+            Shard::Charlie => "https://war-service-live-3.foxholeservices.com/api",
             Shard::Devbranch => "https://war-service-dev.foxholeservices.com/api",
         }
     }
@@ -24,6 +28,7 @@ impl Shard {
         match self {
             Shard::Able => "able",
             Shard::Baker => "baker",
+            Shard::Charlie => "charlie",
             Shard::Devbranch => "devbranch",
         }
     }
@@ -34,6 +39,7 @@ impl std::str::FromStr for Shard {
         Ok(match s.to_lowercase().as_str() {
             "able" => Self::Able,
             "baker" => Self::Baker,
+            "charlie" => Self::Charlie,
             "devbranch" => Self::Devbranch,
             _ => anyhow::bail!("Unrecognized shard {:?}", s),
         })
@@ -172,61 +178,18 @@ impl WarapiClient {
     }
 }
 
-fn get_icon_file_name(icon_id: i32) -> &'static str {
-    // source: https://github.com/clapfoot/warapi?tab=readme-ov-file#map-icons
-    match icon_id {
-        8 => "Forward Base 1", // Forward Base 1,
+fn get_icon_file_name(icon_id: i32) -> anyhow::Result<&'static str> {
+    static MAPPING: LazyLock<HashMap<i32, String>> = LazyLock::new(|| {
+        let src: Vec<(i32, String)> =
+            json5::from_str(&std::fs::read_to_string("data/icon-mapping.json5").unwrap()).unwrap();
+        let out = src.into_iter().collect::<HashMap<_, _>>();
+        out
+    });
+    let out = MAPPING.get(&icon_id).map(|x| -> &'static str { x}).with_context(||
+        anyhow::format_err!("unknown icon type {:?}. Please consult https://github.com/clapfoot/warapi?tab=readme-ov-file#map-icons and update the mapping", icon_id)
+    );
+    out
 
-        11 => "Medical",               // Hospital,
-        12 => "Vehicle",               // Vehicle Factory,
-        17 => "Manufacturing",         // Refinery,
-        18 => "Shipyard",              // Shipyard,
-        19 => "TechCenter",            // Tech Center,
-        20 => "Salvage",               // Salvage Field,
-        21 => "Components",            // Component Field,
-        22 => "FuelField",             // Fuel Field,
-        23 => "Sulfur",                // Sulfur Field,
-        24 => "WorldMapTent",          // World Map Tent,
-        25 => "TravelTent",            // Travel Tent,
-        26 => "TrainingArea",          // Training Area,
-        27 => "Keep",                  // Special Base (Keep),
-        28 => "ObservationTower",      // Observation Tower,
-        29 => "Fort",                  // Fort,
-        30 => "Troop Ship",            // Troop Ship,
-        32 => "SulfurMine",            // Sulfur Mine,
-        33 => "StorageFacility",       // Storage Facility,
-        34 => "Factory",               // Factory,
-        35 => "Safehouse",             // Garrison Station,
-        37 => "RocketSite",            // Rocket Site,
-        38 => "SalvageMine",           // Salvage Mine,
-        39 => "ConstructionYard",      // Construction Yard,
-        40 => "ComponentMine",         // Component Mine,
-        45 => "RelicBase",             // Relic Base 1,
-        51 => "MassProductionFactory", // Mass Production Factory,
-        52 => "Seaport",               // Seaport,
-        53 => "CoastalGun",            // Coastal Gun,
-        54 => "SoulFactory",           // Soul Factory,
-        56 => "TownBaseTier1",         // Town Base 1,
-        57 => "TownBaseTier2",         // Town Base 2,
-        58 => "TownBaseTier3",         // Town Base 3,
-        59 => "StormCannon",           // Storm Cannon,
-        60 => "IntelCenter",           // Intel Center,
-        61 => "Coal",                  // Coal Field,
-        62 => "OilWell",               // Oil Field,
-        70 => "RocketTarget",          // Rocket Target,
-        71 => "RocketGroundZero",      // Rocket Ground Zero,
-        72 => "RocketSiteWithRocket",  // Rocket Site With Rocket,
-        75 => "FacilityMineOilRig",    // Facility Mine Oil Rig,
-        83 => "WeatherStation",        // Weather Station,
-        84 => "MortarHouse",           // Mortar House,
-
-        88 => "AircraftDepot",
-        89 => "AircraftFactory",
-        90 => "AircraftRadar",
-        91 => "AircraftRunwayT1",
-        92 => "AircraftRunwayT2",
-        other => unimplemented!("unknown icon type {:?}", other),
-    }
 }
 
 struct HexCoordInfo {
@@ -257,23 +220,28 @@ impl HexCoordInfo {
     }
 }
 
-fn make_map_icon_id(map_item: &warapi_schema::MapItem) -> String {
-    let icon_file_name = get_icon_file_name(map_item.icon_type);
+fn make_map_icon_id(map_item: &warapi_schema::MapItem) -> anyhow::Result<String> {
+    let icon_file_name = get_icon_file_name(map_item.icon_type)?;
     let faction_suffix: &'static str = match map_item.team_id {
         warapi_schema::TeamId::Colonials => "cl",
         warapi_schema::TeamId::Wardens => "wd",
         warapi_schema::TeamId::Nobody => "nt",
     };
     let icon_id = format!("icon-{}-{}", icon_file_name, faction_suffix);
-    icon_id
+    Ok(icon_id)
 }
-fn make_map_icon_base_id(map_item: &warapi_schema::MapItem) -> String {
-    let icon_file_name = get_icon_file_name(map_item.icon_type);
+fn make_map_icon_base_id(map_item: &warapi_schema::MapItem) -> anyhow::Result<String> {
+    let icon_file_name = get_icon_file_name(map_item.icon_type)?;
     let icon_id = format!("icon-{}-base", icon_file_name);
-    icon_id
+    Ok(icon_id)
 }
 
-fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_schema::Map)>) {
+fn draw_all_hexes(
+    out_f: impl AsRef<std::path::Path>,
+    warapi_repo_path: &std::path::Path,
+    maps: Vec<(String, warapi_schema::Map)>,
+) {
+    let out_f = out_f.as_ref();
     let mut canvas = svg::Document::new();
     let mut worldbox = svg::node::element::Group::new().set("id", "worldbox");
     let mut defs = svg::node::element::Definitions::new();
@@ -402,17 +370,29 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
         map_items.sort_by_key(|it| ordered_float::OrderedFloat(it.y));
 
         for mi in &map_items {
-            let icon_id_for_map = &make_map_icon_id(mi);
+            let icon_id_for_map = &match make_map_icon_id(mi) {
+                Ok(i) => i,
+                Err(e) => {
+                    log::error!("{}", e);
+                    log::error!("When processing {:?} in hex {}", mi, map_name);
+                    log::error!("skipping icon");
+                    continue;
+                }
+            };
             if !known_icon_dims.contains_key(icon_id_for_map) {
                 log::info!("adding {} and variants", icon_id_for_map);
-                let base_icon_id = &make_map_icon_base_id(mi);
+                let base_icon_id = &make_map_icon_base_id(mi).unwrap();
 
                 // if we don't have the pixels - get the pixels
                 if !known_icon_dims.contains_key(base_icon_id) {
-                    let icon_path = &warapi_repo_path
-                        .join("Images")
-                        .join("MapIcons")
-                        .join(format!("MapIcon{}.TGA", get_icon_file_name(mi.icon_type)));
+                    let icon_path =
+                        &warapi_repo_path
+                            .join("Images")
+                            .join("MapIcons")
+                            .join(format!(
+                                "MapIcon{}.TGA",
+                                get_icon_file_name(mi.icon_type).unwrap()
+                            ));
                     let icon = image::ImageReader::open(icon_path)
                         .with_context(|| {
                             format!(
@@ -464,7 +444,7 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
                         team_id: faction,
                         ..mi.clone()
                     };
-                    let icon_id_here = make_map_icon_id(new_mi);
+                    let icon_id_here = make_map_icon_id(new_mi).unwrap();
                     let mut icon_here = svg::node::element::Use::new()
                         .set("id", icon_id_here.clone())
                         .set("href", format!("#{}", base_icon_id));
@@ -473,7 +453,7 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
                     if let Some(filter) = match faction {
                         TeamId::Colonials => Some("colorCollie"),
                         TeamId::Wardens => Some("colorWarden"),
-                        TeamId::Nobody => match get_icon_file_name(new_mi.icon_type) {
+                        TeamId::Nobody => match get_icon_file_name(new_mi.icon_type).unwrap() {
                             "Salvage" | "SalvageMine" => Some("colorSalvage"),
                             "Sulfur" | "SulfurMine" => Some("colorSulfur"),
                             "Coal" => Some("colorCoal"),
@@ -617,7 +597,7 @@ fn draw_all_hexes(warapi_repo_path: &std::path::Path, maps: Vec<(String, warapi_
 
     // let mut worldbox = svg::node::element::SVG
 
-    let out_f = &std::path::PathBuf::from("tmp/out.svg");
+    // let out_f = &std::path::PathBuf::from("tmp/out.svg");
     std::fs::create_dir_all(out_f.parent().unwrap()).unwrap();
     svg::save(out_f, &canvas).unwrap();
     log::info!("Written to {}", out_f.display());
@@ -636,7 +616,8 @@ fn do_stuff(cfg: &Config, opts: &Options) {
         .collect::<Vec<_>>();
 
     // let warapi_repo_path = std::path::Path::new(WARAPI_REPO_PATH);
-    draw_all_hexes(&cfg.warapi_repo_path, maps);
+    let out_name = format!("out/out-{}.svg", client.war_name);
+    draw_all_hexes(out_name, &cfg.warapi_repo_path, maps);
 }
 
 #[derive(serde::Deserialize)]
@@ -752,14 +733,16 @@ fn main() {
             &cfg.warapi_repo_path,
         );
     }
-    log::info!("initializing yinoguns repo (for the historic map data)");
-    cfg.yino_repo_path = Some("cache/yino-foxhole-web-utils-repo".into());
+    if false {
+        log::info!("initializing yinoguns repo (for the historic map data)");
+        cfg.yino_repo_path = Some("cache/yino-foxhole-web-utils-repo".into());
 
-    if !opts.skip_git {
-        fetch_git_repo(
-            "https://github.com/clapfoot/warapi.git",
-            cfg.yino_repo_path.as_ref().unwrap(),
-        );
+        if !opts.skip_git {
+            fetch_git_repo(
+                "https://github.com/clapfoot/warapi.git",
+                cfg.yino_repo_path.as_ref().unwrap(),
+            );
+        }
     }
 
     do_stuff(&cfg, &opts)
