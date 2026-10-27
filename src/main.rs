@@ -178,18 +178,17 @@ impl WarapiClient {
     }
 }
 
-fn get_icon_file_name(icon_id: i32) -> anyhow::Result<&'static str> {
+fn get_icon_file_name(icon_id: i32) -> anyhow::Result<String> {
     static MAPPING: LazyLock<HashMap<i32, String>> = LazyLock::new(|| {
         let src: Vec<(i32, String)> =
             json5::from_str(&std::fs::read_to_string("data/icon-mapping.json5").unwrap()).unwrap();
         let out = src.into_iter().collect::<HashMap<_, _>>();
         out
     });
-    let out = MAPPING.get(&icon_id).map(|x| -> &'static str { x}).with_context(||
+    let out = MAPPING.get(&icon_id).cloned().with_context(||
         anyhow::format_err!("unknown icon type {:?}. Please consult https://github.com/clapfoot/warapi?tab=readme-ov-file#map-icons and update the mapping", icon_id)
     );
     out
-
 }
 
 struct HexCoordInfo {
@@ -220,20 +219,22 @@ impl HexCoordInfo {
     }
 }
 
-fn make_map_icon_id(map_item: &warapi_schema::MapItem) -> anyhow::Result<String> {
-    let icon_file_name = get_icon_file_name(map_item.icon_type)?;
+fn make_map_icon_id(map_item: &warapi_schema::MapItem) -> String {
+    let icon_file_name = get_icon_file_name(map_item.icon_type)
+        .unwrap_or_else(|_| format!("unknown-icon-{}", map_item.icon_type));
     let faction_suffix: &'static str = match map_item.team_id {
         warapi_schema::TeamId::Colonials => "cl",
         warapi_schema::TeamId::Wardens => "wd",
         warapi_schema::TeamId::Nobody => "nt",
     };
     let icon_id = format!("icon-{}-{}", icon_file_name, faction_suffix);
-    Ok(icon_id)
+    icon_id
 }
-fn make_map_icon_base_id(map_item: &warapi_schema::MapItem) -> anyhow::Result<String> {
-    let icon_file_name = get_icon_file_name(map_item.icon_type)?;
+fn make_map_icon_base_id(map_item: &warapi_schema::MapItem) -> String {
+    let icon_file_name = get_icon_file_name(map_item.icon_type)
+        .unwrap_or_else(|_| format!("unknown-icon-{}", map_item.icon_type));
     let icon_id = format!("icon-{}-base", icon_file_name);
-    Ok(icon_id)
+    icon_id
 }
 
 fn draw_all_hexes(
@@ -370,39 +371,20 @@ fn draw_all_hexes(
         map_items.sort_by_key(|it| ordered_float::OrderedFloat(it.y));
 
         for mi in &map_items {
-            let icon_id_for_map = &match make_map_icon_id(mi) {
-                Ok(i) => i,
-                Err(e) => {
-                    log::error!("{}", e);
-                    log::error!("When processing {:?} in hex {}", mi, map_name);
-                    log::error!("skipping icon");
-                    continue;
-                }
-            };
+            let icon_id_for_map = &make_map_icon_id(mi);
             if !known_icon_dims.contains_key(icon_id_for_map) {
                 log::info!("adding {} and variants", icon_id_for_map);
-                let base_icon_id = &make_map_icon_base_id(mi).unwrap();
+                let base_icon_id = &make_map_icon_base_id(mi);
 
                 // if we don't have the pixels - get the pixels
                 if !known_icon_dims.contains_key(base_icon_id) {
-                    let icon_path =
-                        &warapi_repo_path
-                            .join("Images")
-                            .join("MapIcons")
-                            .join(format!(
-                                "MapIcon{}.TGA",
-                                get_icon_file_name(mi.icon_type).unwrap()
-                            ));
-                    let icon = image::ImageReader::open(icon_path)
-                        .with_context(|| {
-                            format!(
-                                "trying to open {:?} - icon type {}",
-                                icon_path, mi.icon_type
-                            )
-                        })
-                        .unwrap()
-                        .decode()
-                        .unwrap();
+                    let icon = match get_icon_pixels(warapi_repo_path, mi) {
+                        Some(i) => i,
+                        None => {
+                            log::error!("When processing {:?} in hex {}", mi, map_name);
+                            continue;
+                        }
+                    };
                     let (icon_width, icon_height) = (
                         (icon.width() as f32 * icon_scale_factor).round(),
                         (icon.height() as f32 * icon_scale_factor).round(),
@@ -444,7 +426,7 @@ fn draw_all_hexes(
                         team_id: faction,
                         ..mi.clone()
                     };
-                    let icon_id_here = make_map_icon_id(new_mi).unwrap();
+                    let icon_id_here = make_map_icon_id(new_mi);
                     let mut icon_here = svg::node::element::Use::new()
                         .set("id", icon_id_here.clone())
                         .set("href", format!("#{}", base_icon_id));
@@ -453,7 +435,10 @@ fn draw_all_hexes(
                     if let Some(filter) = match faction {
                         TeamId::Colonials => Some("colorCollie"),
                         TeamId::Wardens => Some("colorWarden"),
-                        TeamId::Nobody => match get_icon_file_name(new_mi.icon_type).unwrap() {
+                        TeamId::Nobody => match get_icon_file_name(new_mi.icon_type)
+                            .unwrap_or_else(|_| "".to_string())
+                            .as_str()
+                        {
                             "Salvage" | "SalvageMine" => Some("colorSalvage"),
                             "Sulfur" | "SulfurMine" => Some("colorSulfur"),
                             "Coal" => Some("colorCoal"),
@@ -603,12 +588,50 @@ fn draw_all_hexes(
     log::info!("Written to {}", out_f.display());
 }
 
+fn get_icon_pixels(
+    warapi_repo_path: &std::path::Path,
+    mi: &warapi_schema::MapItem,
+) -> Option<image::DynamicImage> {
+    let icon_path = match mi.icon_type {
+        // Exceptions, not in the repo, lol lmao. Hardcoding them because duh...
+        97 => {
+            std::path::Path::new("data").join("extra-icons").join("MapIconAAGunAI.png").to_path_buf()
+        }
+        _ => {
+            let file_basename = match get_icon_file_name(mi.icon_type) {
+                Ok(i) => i,
+                Err(e) => {
+                    log::error!("{}", e);
+                    log::error!("skipping icon");
+                    return None;
+                }
+            };
+            let icon_path = warapi_repo_path
+                .join("Images")
+                .join("MapIcons")
+                .join(format!("MapIcon{}.TGA", file_basename));
+            icon_path
+        }
+    };
+    let icon = image::ImageReader::open(&icon_path)
+        .with_context(|| {
+            format!(
+                "trying to open {:?} - icon type {}",
+                icon_path, mi.icon_type
+            )
+        })
+        .unwrap()
+        .decode()
+        .unwrap();
+    Some(icon)
+}
+
 fn do_stuff(cfg: &Config, opts: &Options) {
     let agent = ureq::Agent::new_with_defaults();
     let shard = opts.shard;
     // let shard = Shard::Devbranch;
     let client = WarapiClient::new(agent, shard);
-
+    log::info!("This is war {:?}", client.war_name);
     let maps = client
         .maps()
         .iter()
